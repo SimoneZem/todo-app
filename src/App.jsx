@@ -40,13 +40,12 @@ done verde, not done rosso, planned for giallo.
 
 import React from "react";
 import "./App.css";
-import Form from "./components/Form";
-import List from "./components/List";
+import TodoList from "./components/TodoList";
 
 function App() {
   return (
     <div className="App">
-      <List />
+      <TodoList />
     </div>
   );
 }
