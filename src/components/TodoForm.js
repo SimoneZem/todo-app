@@ -5,7 +5,6 @@ function TodoForm(props) {
 
   const handleChange = (e) => {
     setInput(e.target.value);
-    console.log(">>>> ~ file: TodoForm.js ~ line 9 ~ handleChange ~ e", e);
   };
 
   const handleSubmit = (e) => {
