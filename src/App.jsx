@@ -21,7 +21,7 @@ Gli stati saranno 3:
 2) not done 
 bonus point
  ---------
-3) planned for 
+3) planned for  
 
 Se premo planned for dovra' comparire un altro form all'interno del task relativo che mi fara' inserire la data di completamento. 
 --------------  Fine del bonus point, 

@@ -2,9 +2,9 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  width: 620px;
-  min-height: 700px;
+  justify-content: flex-start;
+  width: 580px;
+  min-height: 600px;
   /*
     min-height serve per dare una dimensione di partenza dell'app più grande.
     altrimenti, senza nessun campo di testo occuperebbe solo lo spazio intorno a add activity
@@ -14,18 +14,13 @@
   margin: 128px;
   border-radius: 10px;
   padding-bottom: 32px;
-  margin-left: 35%;
+  margin-left: 30%;
 }
 
 h1 {
   margin: 35px 0;
   color: rgba(201, 191, 191, 0.632);
   font-size: 24px;
-}
-
-.complete {
-  text-decoration: line-through;
-  opacity: 0.5;
 }
 
 .todo-form {
@@ -74,6 +69,12 @@ h1 {
   padding: 16px;
   border-radius: 5px;
   width: 90%;
+}
+
+.complete {
+  text-decoration: line-through;
+  background-color: greenyellow;
+  opacity: 0.6;
 }
 
 .icons {

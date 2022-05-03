@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import TodoForm from "./TodoForm";
 import Todo from "./Todo";
 
+const todoECompostoTotalmenteDaSpazi = /^\s*$/;
+
 function TodoList() {
   const [todos, setTodos] = useState([]);
 
   const addTodo = (todo) => {
-    /*la funzione che scriverò di sotto serve sostanzialmente per renderizzare in maniera visivamente non sgradevole un eccesso di spazi all'interno del field dell'attività. Per intenderci
-      se dovessi scrivere " p                    o" quello che verrà renderizzato sarà "p o"
-      */
-    if (!todo.text || /^\s*$/.test(todo.text)) {
+    if (!todo.text || todoECompostoTotalmenteDaSpazi.test(todo.text)) {
       return;
     }
 
@@ -19,20 +18,9 @@ function TodoList() {
     console.log(...todos);
   };
 
-  const updateTodo = (todoId, newValue) => {
-    if (!newValue.text || /^\s*$/.test(newValue.text)) {
-      return;
-    }
-
-    setTodos((prev) =>
-      prev.map((item) => (item.id === todoId ? newValue : item))
-    );
-  };
-
   const removeTodo = (id) => {
-    const removedArr = [...todos].filter((todo) => todo.id !== id);
-
-    setTodos(removedArr);
+    const removeArr = [...todos].filter((todo) => todo.id !== id);
+    setTodos(removeArr);
   };
 
   const completeTodo = (id) => {
@@ -49,12 +37,7 @@ function TodoList() {
     <>
       <h1>Business Today</h1>
       <TodoForm onSubmit={addTodo} />
-      <Todo
-        todos={todos}
-        completeTodo={completeTodo}
-        removeTodo={removeTodo}
-        updateTodo={updateTodo}
-      />
+      <Todo todos={todos} completeTodo={completeTodo} removeTodo={removeTodo} />
     </>
   );
 }
