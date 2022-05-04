@@ -19,7 +19,7 @@ function TodoList() {
   };
 
   const updateTodo = (todoId, newValue) => {
-    if (!newValue.text || /^\s*$/.test(newValue.text)) {
+    if (!newValue.text || todoECompostoTotalmenteDaSpazi.test(newValue.text)) {
       return;
     }
 

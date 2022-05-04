@@ -1,4 +1,5 @@
 .App {
+  background-image: url(https://image.posterlounge.it/images/l/1899322.jpg);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -9,28 +10,32 @@
     min-height serve per dare una dimensione di partenza dell'app più grande.
     altrimenti, senza nessun campo di testo occuperebbe solo lo spazio intorno a add activity
   */
-  background: rgb(44, 1, 10);
+  /* background: rgb(44, 1, 10); */
   text-align: center;
   margin: 128px;
   border-radius: 10px;
   padding-bottom: 32px;
   margin-left: 30%;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
-  margin: 35px 0;
-  color: rgba(201, 191, 191, 0.632);
+  margin: 30px 0;
+  color: white;
   font-size: 24px;
 }
 
 .todo-form {
+  background-color: black;
   margin-bottom: 35px;
 }
 
 .todo-input {
   padding: 14px 35px 15px 20px;
   border-radius: 4px;
-  border: 2px solid #512aa0;
+  border: 2px solid white;
   outline: none;
   width: 350px;
   background: transparent;
@@ -47,7 +52,7 @@ h1 {
   border-radius: 4px;
   cursor: pointer;
   outline: none;
-  background: rgba(155, 0, 250, 1) 100%;
+  background: rgb(37, 1, 59) 100%;
   color: #fff;
   text-transform: uppercase;
   margin-left: 10px;
@@ -69,6 +74,7 @@ h1 {
   padding: 16px;
   border-radius: 5px;
   width: 90%;
+  opacity: 0.88;
 }
 
 .complete {
